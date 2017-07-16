@@ -186,17 +186,15 @@ void ListReverse3(List *L) {
 	/*Use limited memory space*/
 	Position LPos = First(*L);
 	Position PreLPos = *L;
-	Position NexLPos;
-	int length = 0;
+	Position NexLPos=NULL;
+	Position LHeadPos = First(*L);
 	while (!IsLast(LPos)) {
 		NexLPos = LPos->Next;
 		LPos->Next = PreLPos;
 		PreLPos = LPos;
 		LPos = NexLPos;
 	}
-	(*L)->Next = LPos;
+	(*L)->Next = NexLPos;
 	LPos->Next = PreLPos;
-	LPos = First(*L);
-
-	NexLPos->Next = NULL;
+	LHeadPos->Next = NULL;
 }
