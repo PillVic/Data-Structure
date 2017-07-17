@@ -198,3 +198,20 @@ void ListReverse3(List *L) {
 	LPos->Next = PreLPos;
 	LHeadPos->Next = NULL;
 }
+
+void ListDeleteCommon(List *L) {
+	Position LPos1 = First(*L);
+	while (!IsLast(LPos1)) {
+		Position LPos2 = Advance(LPos1);
+		while (LPos2) {
+			if (LPos2->Element == LPos1->Element) {
+				Position tmpPos = Advance(LPos2);
+				Delete(LPos2->Element, LPos1);
+				LPos2 = tmpPos;
+				continue;
+			}
+			LPos2 = Advance(LPos2);
+		}
+		LPos1 = Advance(LPos1);
+	}
+}
