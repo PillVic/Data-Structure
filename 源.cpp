@@ -12,7 +12,7 @@ int main() {
 	Insert(3, L, L);
 	PrintList(L);
 	printf("\n");
-	ListDeleteCommon(&L);
+	ListDeleteCommon(L);
 	PrintList(L);
 	return 0;
 }

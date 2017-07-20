@@ -32,4 +32,7 @@ void ListReverse1(List *L);
 void ListReverse2(List *L);
 void ListReverse3(List *L);
 
-void ListDeleteCommon(List *L);
+void ListDeleteCommon(List L);
+
+void CheckBalanceSign(char signs[],int N);
+void BackCal(char* expression[], int length);

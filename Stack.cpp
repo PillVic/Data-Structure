@@ -21,8 +21,14 @@ Stack CreateStack(void) {
 	S->Next = NULL;
 	return S;
 }
-
-void MakeEmpty(Stack S) {
+void DisposeStack(Stack S) {
+	while (!IsEmptyStack(S)) {
+		Pop(S);
+	}
+	free(S);
+	S = NULL;
+}
+void MakeEmptyStack(Stack S) {
 	if (NULL == S) {
 		printf("Must use CreateStack first");
 	}

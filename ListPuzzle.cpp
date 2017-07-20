@@ -199,8 +199,8 @@ void ListReverse3(List *L) {
 	LHeadPos->Next = NULL;
 }
 
-void ListDeleteCommon(List *L) {
-	Position LPos1 = First(*L);
+void ListDeleteCommon(List L) {
+	Position LPos1 = First(L);
 	while (!IsLast(LPos1)) {
 		Position LPos2 = Advance(LPos1);
 		while (LPos2) {
