@@ -1,18 +1,19 @@
 #include"List.h"
 #include"Puzzle.h"
+#include"Tree.h"
 
 #define N 10
 
 int main() {
-	List L = MakeEmpty(NULL);
-	for (int i = 0; i < N; i++) {
-		Insert(N - i, L, L);
+	/*Build a tree*/
+	TreeNode Root;
+	SearchTree T = &Root;
+	Root.Left = Root.Right = NULL;
+	Root.Element = 3;
+	int arr[7] = { 1,4,6,9,2,5,7 };
+	for (int i = 0; i < 7; i++) {
+		TreeInsert(arr[i], T);
 	}
-	Insert(5, L, L);
-	Insert(3, L, L);
-	PrintList(L);
-	printf("\n");
-	ListDeleteCommon(L);
-	PrintList(L);
+	PrintTree(T);
 	return 0;
 }

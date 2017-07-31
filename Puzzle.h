@@ -1,5 +1,6 @@
 #pragma once
 #include"List.h"
+#include"Tree.h"
 
 int Choice1(int arr[], int k, int N);
 int Choice2(int arr[], int k, int N);
@@ -36,3 +37,11 @@ void ListDeleteCommon(List L);
 
 void CheckBalanceSign(char signs[],int N);
 void BackCal(char* expression[], int length);
+
+int CalTreeNode(SearchTree T);
+int CalTreeLeave(SearchTree T);
+int CalTreeFullNode(SearchTree T);
+void PrintTree(SearchTree T);
+
+
+
