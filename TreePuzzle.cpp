@@ -34,4 +34,16 @@ int CalTreeLeave(TreePosition T) {
 	LeaveNum += CalTreeLeave(T->Right);
 	return LeaveNum;
 }
-int CalTreeFullNode(TreePosition T);
+int CalTreeFullNode(TreePosition T) {
+	/*Base Case*/
+	if (NULL == T) {
+		return 0;
+	}
+	else if (NULL == T->Left || NULL == T->Right) {
+		return 0;
+	}
+	int FulNodNum = 1;
+	FulNodNum += CalTreeFullNode(T->Left);
+	FulNodNum += CalTreeFullNode(T->Right);
+	return FulNodNum;
+}
