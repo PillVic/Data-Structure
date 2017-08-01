@@ -10,6 +10,15 @@ void PrintTree(SearchTree T) {
 	}
 }
 
-int CalTreeNode(SearchTree root);
+
+int CalTreeNode(SearchTree root) {
+	if (NULL == root) {
+		return 0;
+	}
+	int NodeNum = 1;
+	NodeNum += CalTreeNode(root->Left);
+	NodeNum += CalTreeNode(root->Right);
+	return NodeNum;
+}
 int CalTreeLeave(TreePosition T);
 int CalTreeFullNode(TreePosition T);
