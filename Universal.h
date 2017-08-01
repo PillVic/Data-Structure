@@ -6,7 +6,7 @@
 #include<stdlib.h>
 
 #define IsEven(X) !(X&0x1==1)
-
+#define MAX2(A,B) A>B?A:B
 
 void swap(int *a, int *b);
 
