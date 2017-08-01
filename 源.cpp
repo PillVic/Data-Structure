@@ -15,6 +15,6 @@ int main() {
 		TreeInsert(arr[i], T);
 	}
 	PrintTree(T);
-	printf("\n%d", CalTreeNode(T));
+	printf("\n%d", CalTreeLeave(T));
 	return 0;
 }

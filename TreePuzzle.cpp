@@ -12,6 +12,7 @@ void PrintTree(SearchTree T) {
 
 
 int CalTreeNode(SearchTree root) {
+	/*Base Case*/
 	if (NULL == root) {
 		return 0;
 	}
@@ -20,5 +21,17 @@ int CalTreeNode(SearchTree root) {
 	NodeNum += CalTreeNode(root->Right);
 	return NodeNum;
 }
-int CalTreeLeave(TreePosition T);
+int CalTreeLeave(TreePosition T) {
+	/*Base Case*/
+	if (NULL == T) {
+		return 0;
+	}
+	else if (NULL==T->Left&&NULL==T->Right) {
+		return 1;
+	}
+	int LeaveNum = 0;
+	LeaveNum += CalTreeLeave(T->Left);
+	LeaveNum += CalTreeLeave(T->Right);
+	return LeaveNum;
+}
 int CalTreeFullNode(TreePosition T);
