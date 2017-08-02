@@ -42,6 +42,4 @@ int CalTreeNode(SearchTree T);
 int CalTreeLeave(SearchTree T);
 int CalTreeFullNode(SearchTree T);
 void PrintTree(SearchTree T);
-
-
-
+void PrintMidTree(SearchTree T,int K1,int K2);

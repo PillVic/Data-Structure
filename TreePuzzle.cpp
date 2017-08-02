@@ -21,7 +21,7 @@ int CalTreeNode(SearchTree root) {
 	NodeNum += CalTreeNode(root->Right);
 	return NodeNum;
 }
-int CalTreeLeave(TreePosition T) {
+int CalTreeLeave(SearchTree T) {
 	/*Base Case*/
 	if (NULL == T) {
 		return 0;
@@ -29,12 +29,14 @@ int CalTreeLeave(TreePosition T) {
 	else if (NULL==T->Left&&NULL==T->Right) {
 		return 1;
 	}
+
 	int LeaveNum = 0;
 	LeaveNum += CalTreeLeave(T->Left);
 	LeaveNum += CalTreeLeave(T->Right);
+
 	return LeaveNum;
 }
-int CalTreeFullNode(TreePosition T) {
+int CalTreeFullNode(SearchTree T) {
 	/*Base Case*/
 	if (NULL == T) {
 		return 0;
@@ -42,8 +44,24 @@ int CalTreeFullNode(TreePosition T) {
 	else if (NULL == T->Left || NULL == T->Right) {
 		return 0;
 	}
+
 	int FulNodNum = 1;
 	FulNodNum += CalTreeFullNode(T->Left);
 	FulNodNum += CalTreeFullNode(T->Right);
+
 	return FulNodNum;
 }
+void PrintMidTree(SearchTree T,int K1,int K2) {
+	/*Print all the element between K1 and K2*/
+	/*K1,K2 included*/
+	/*Base Case*/
+	if (T != NULL) {
+		PrintMidTree(T->Left, K1, K2);
+		if (T->Element >= K1&&T->Element <= K2) {
+			printf("%d ", T->Element);
+		}
+		PrintMidTree(T->Right, K1, K2);
+	}
+}
+
+
