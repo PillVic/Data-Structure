@@ -64,4 +64,19 @@ void PrintMidTree(SearchTree T,int K1,int K2) {
 	}
 }
 
+int IsSameTree(SearchTree T1, SearchTree T2) {
+	/*Base Case*/
+	if (NULL == T1&&NULL == T2) {
+		return 1;
+	}
+	else if (NULL == T1 || NULL == T2) {
+		return 0;
+	}
 
+	else {
+		int Left = IsSameTree(T1->Left, T2->Left);
+		int right = IsSameTree(T1->Right, T2->Right);
+		return Left&&right;
+	}
+
+}
