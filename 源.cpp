@@ -21,6 +21,6 @@ int main() {
 	}
 	PrintTree(T1);
 	printf("\n%d\n", CalTreeFullNode(T1));
-	printf("%d", IsSameTree(T1, T2));
+	printf("%d", IsLikeTree(T1, T2));
 	return 0;
 }
