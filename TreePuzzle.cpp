@@ -78,5 +78,19 @@ int IsLikeTree(SearchTree T1, SearchTree T2) {
 		int right = IsLikeTree(T1->Right, T2->Right);
 		return Left&&right;
 	}
+}
+int IsSameTree(SearchTree T1, SearchTree T2) {
+	/*Base Case*/
+	if (NULL == T1&&NULL == T2) {
+		return 1;
+	}
 
+	if (T1 != NULL&&T2 != NULL) {
+		if (T1->Element != T2->Element) {
+			return 0;
+		}
+		int Left = IsSameTree(T1->Left, T2->Left);
+		int Right = IsSameTree(T1->Right, T2->Right);
+		return Left&&Right;
+	}
 }

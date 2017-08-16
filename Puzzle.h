@@ -1,7 +1,7 @@
 #pragma once
 #include"List.h"
 #include"Tree.h"
-
+#include"Universal.h"
 int Choice1(int arr[], int k, int N);
 int Choice2(int arr[], int k, int N);
 
@@ -44,3 +44,4 @@ int CalTreeFullNode(SearchTree T);
 void PrintTree(SearchTree T);
 void PrintMidTree(SearchTree T,int K1,int K2);
 int IsLikeTree(SearchTree T1, SearchTree T2);
+int IsSameTree(SearchTree T1, SearchTree T2);

@@ -12,6 +12,9 @@ void swap(int *a, int *b);
 
 int RandInt(int i, int j);
 
+
+int NextPrime(int X);
+
 struct Item {
 	int Coefficient;
 	int Exponent;

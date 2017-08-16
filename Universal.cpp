@@ -22,3 +22,4 @@ int RandInt(int i, int j) {
 	r = r % (end - bgn + 1) + bgn;
 	return r;
 }
+

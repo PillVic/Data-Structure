@@ -42,3 +42,19 @@ void PrintPrimes(int N) {
 	}
 	return;
 }
+
+
+int NextPrime(int X) {
+	int t = X;
+	if (IsEven(X)) {
+		t += 1;
+		if (IsPrime(X)) {
+			return t;
+		}
+	}
+	t += 2;
+	while (!IsPrime(t)) {
+		t += 2;
+	}
+	return t;
+}
