@@ -5,7 +5,7 @@
 TextPuzzle.h
 --------
 把基本上所有的题目都以函数形式声明在该头文件TextPuzzle.h中
-### Universal.h Universal.cpp
+### Universal.h   Universal.cpp
 对书中常用而又非C语言本身提供的方法进行实现,例如IsEven()等，书中没有给出具体的实现方法
 
 ### *.cpp *.h 
