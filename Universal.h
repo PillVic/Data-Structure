@@ -15,6 +15,8 @@ int RandInt(int i, int j);
 
 int NextPrime(int X);
 
+//桶式排序，通过牺牲空间来换取O(N)的时间复杂度
+//不是通过比较，所以比一般的比较排序绝对要快
 void BucketSort(int arr[], int length, int range);
 
 struct Item {

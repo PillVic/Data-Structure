@@ -44,4 +44,5 @@ void BucketSort(int arr[], int N, int range) {
 		}
 		Tindex++;
 	}
+	free(table);
 }
