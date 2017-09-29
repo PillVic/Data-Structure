@@ -15,6 +15,8 @@ int RandInt(int i, int j);
 
 int NextPrime(int X);
 
+void BucketSort(int arr[], int length, int range);
+
 struct Item {
 	int Coefficient;
 	int Exponent;
