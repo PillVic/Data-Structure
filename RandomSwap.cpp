@@ -57,7 +57,4 @@ void RandomSwap4(int N, int arr[]) {
 		}
 		arr[index] = element;
 	}
-	for (int i = 0; i < N; i++) {
-		printf("%d ", arr[i]);
-	}
 }

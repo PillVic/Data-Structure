@@ -1,14 +1,23 @@
 #include"List.h"
 #include"Puzzle.h"
 #include"Tree.h"
+#include"Universal.h"
+#include<iostream>
 
-#define N 10
+#define N 50
+
+using namespace std;
 
 int main() {
-	int arr[6] = { 4,1,3,5,2,7 };
-	BucketSort(arr, 6, 7);
-	for (int i = 0; i < 6; i++) {
-		printf("%d ", arr[i]);
+	int arr[N] = { 0 };
+	RandomSwap4(N,arr);
+	for (int index = 0; index < N; index++) {
+		cout << arr[index] << " ";
+	}
+	cout << endl;
+	RadixSort(arr, N, 100);
+	for (int index = 0; index < N; index++) {
+		cout << arr[index] << " ";
 	}
 	return 0;
 }
