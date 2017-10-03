@@ -58,40 +58,37 @@ void RadixSort(int arr[], int N, int range){
 	int step = 0;
 	int Time = ceil(log10(range));
 	List resultLast[10];
-beginning:
-	//Initial the array to store the list
-	for (int i = 0; i < 10; i++) {
-		result[i] = MakeEmpty(result[i]);
-		resultLast[i] = result[i];
-	}
-	//Input the data into result array
-	for (int indexArr = 0; indexArr < N; indexArr++) {
-		int indexRes = GetNumber(arr[indexArr], step+1);
-		Insert(arr[indexArr], result[indexRes], resultLast[indexRes]);
-		resultLast[indexRes] = resultLast[indexRes]->Next;
-	}
-	//Out put the data into arr
-	int indexArr = 0;
-	while (indexArr < N) {
-		for (int indexRes = 0; indexRes < 10; indexRes++) {
-			Position P = result[indexRes]->Next;
-			while (P != NULL) {
-				arr[indexArr] = P->Element;
-				indexArr++;
-				P = P->Next;
+	while (step < Time) {
+		//Initial the array to store the list
+		for (int i = 0; i < 10; i++) {
+			result[i] = MakeEmpty(result[i]);
+			resultLast[i] = result[i];
+		}
+		//Input the data into result array
+		for (int indexArr = 0; indexArr < N; indexArr++) {
+			int indexRes = GetNumber(arr[indexArr], step + 1);
+			Insert(arr[indexArr], result[indexRes], resultLast[indexRes]);
+			resultLast[indexRes] = resultLast[indexRes]->Next;
+		}
+		//Out put the data into arr
+		int indexArr = 0;
+		while (indexArr < N) {
+			for (int indexRes = 0; indexRes < 10; indexRes++) {
+				Position P = result[indexRes]->Next;
+				while (P != NULL) {
+					arr[indexArr] = P->Element;
+					indexArr++;
+					P = P->Next;
+				}
 			}
 		}
-	}
-	//free memory
-	for (int index = 0; index < 10; index++) {
-		DeleteList(result[index]);
-	}
-	step++;
-	if (step < Time) {
-		goto beginning;
+		//free memory
+		for (int index = 0; index < 10; index++) {
+			DeleteList(result[index]);
+		}
+		step++;
 	}
 }
-
 
 
 

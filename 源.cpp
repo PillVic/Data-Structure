@@ -4,7 +4,7 @@
 #include"Universal.h"
 #include<iostream>
 
-#define N 50
+#define N 20
 
 using namespace std;
 
