@@ -8,16 +8,13 @@
 
 using namespace std;
 
+
 int main() {
-	int arr[N] = { 0 };
-	RandomSwap4(N,arr);
-	for (int index = 0; index < N; index++) {
-		cout << arr[index] << " ";
-	}
-	cout << endl;
-	RadixSort(arr, N, 100);
-	for (int index = 0; index < N; index++) {
-		cout << arr[index] << " ";
-	}
+	int arr[N];
+	RandomSwap4(N/2,arr);
+	RandomSwap4(N / 2, arr + N / 2);
+	PrintArr(arr, N);
+	BucketSort(arr, N, N);
+	PrintArr(arr, N);
 	return 0;
 }

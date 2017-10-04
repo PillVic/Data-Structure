@@ -17,7 +17,7 @@ int MaxSubProduct(const int arr[], int N);
 bool IsPrime(int n);
 void PrintPrimes(int N);
 
-int GetMainElement1(int arr[], int N);
+int GetMainElement(int arr[], int N);
 
 
 void PrintList(List Head);

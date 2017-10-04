@@ -3,11 +3,19 @@
 #include<time.h>
 #include<math.h>
 #include"List.h"
+#include"Puzzle.h"
 
 void swap(int *a, int *b) {
 	int t = *a;
 	*a = *b;
 	*b = t;
+}
+
+void PrintArr(int arr[], int length) {
+	for (int index = 0; index < length; index++) {
+		printf("%d ", arr[index]);
+	}
+	printf("\n");
 }
 
 //随机数生成器，生成一个i和j之间的一个整数
@@ -30,28 +38,26 @@ int GetNumber(int Number, int N) {
 	return Number % 10;
 }
 
-void BucketSort(int arr[], int N, int range) {
+void BucketSort(int A[], int N, int range) {
 	//实现桶式排序
-	if (range <= 0) {
-		printf("Wrong range!!!");
-		return;
+	int *Table = (int*)malloc(range * sizeof(int));
+	for (int index = 0; index < range; index++) {
+		Table[index] = 0;
 	}
-	bool *table = (bool*)malloc(range * sizeof(bool));
-	for (int i = 0; i < range; i++) {
-		table[i] = false;
+	//sort the data
+	for (int indexA = 0; indexA < N; indexA++) {
+		Table[A[indexA]] += 1;
 	}
-	for (int i = 0; i < N; i++) {
-		table[arr[i]] = true;
-	}
-	int Aindex = 0; int Tindex = 0;
-	while (Aindex < N&&Tindex<range) {
-		if (table[Tindex]) {
-			arr[Aindex] = Tindex;
-			Aindex++;
+	//input the data into A array
+	int indexA = 0;
+	for (int indexTable = 0; indexTable < range; indexTable++) {
+		while (Table[indexTable] != 0) {
+			A[indexA] = indexTable;
+			indexA++;
+			Table[indexTable]--;
 		}
-		Tindex++;
 	}
-	free(table);
+	free(Table);
 }
 void RadixSort(int arr[], int N, int range){ 
 	List result[10];
@@ -92,4 +98,6 @@ void RadixSort(int arr[], int N, int range){
 
 
 
-
+int GetMainElement(int A[], int length) {
+	return 0;
+}

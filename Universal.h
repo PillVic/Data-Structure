@@ -8,6 +8,7 @@
 #define IsEven(X) !(X&0x1==1)
 #define MAX2(A,B) A>B?A:B
 
+void PrintArr(int arr[], int length);
 void swap(int *a, int *b);
 
 int RandInt(int i, int j);
