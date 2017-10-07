@@ -99,5 +99,29 @@ void RadixSort(int arr[], int N, int range){
 
 
 int GetMainElement(int A[], int length) {
-	return 0;
+	//copy the array
+	int max = A[0];
+	for (int indexA = 0; indexA < length; indexA++) {
+		if (max < A[indexA]) {
+			max = A[indexA];
+		}
+	}
+	int *tmp = (int*)malloc(length * sizeof(int));
+	for (int index = 0; index < length; index++) {
+		tmp[index] = A[index];
+	}
+	BucketSort(tmp, length, max);
+	//get the element which  has the only posibility to be
+	int half = (int)ceil(length*1.0 / 2);
+	for (int index = 0; index < half; index++) {
+		int head = tmp[index];
+		int tail = tmp[index + half-1];
+		if (head == tail) {
+			free(tmp);
+			return head;
+		}
+	}
+	free(tmp);
+	printf("No main element!!!\n");
+	return -1;
 }

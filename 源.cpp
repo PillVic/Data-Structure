@@ -10,11 +10,9 @@ using namespace std;
 
 
 int main() {
-	int arr[N];
-	RandomSwap4(N/2,arr);
-	RandomSwap4(N / 2, arr + N / 2);
-	PrintArr(arr, N);
-	BucketSort(arr, N, N);
-	PrintArr(arr, N);
+	int arr[8] = { 3,3,4,2,4,4,2,4 };
+	BucketSort(arr, 8, 10);
+	PrintArr(arr, 8);
+	cout << GetMainElement(arr, 8);
 	return 0;
 }
