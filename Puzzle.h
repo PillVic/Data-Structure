@@ -18,7 +18,7 @@ bool IsPrime(int n);
 void PrintPrimes(int N);
 
 int GetMainElement(int arr[], int N);
-
+int GetMainElement2(int arr[], int N);
 
 void PrintList(List Head);
 void PrintLots(List L, List P);

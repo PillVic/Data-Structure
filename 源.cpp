@@ -10,9 +10,7 @@ using namespace std;
 
 
 int main() {
-	int arr[8] = { 3,3,4,2,4,4,2,4 };
-	BucketSort(arr, 8, 10);
-	PrintArr(arr, 8);
-	cout << GetMainElement(arr, 8);
+	int arr[9] = { 3,3,4,2,4,4,2,4,4 };
+	cout << GetMainElement(arr, 9);
 	return 0;
 }

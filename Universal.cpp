@@ -96,9 +96,57 @@ void RadixSort(int arr[], int N, int range){
 	}
 }
 
+int GetMainElement(int A[], int N) {
+	printf("A:");
+	PrintArr(A, N);
+	if (N == 2) {
+		if (A[0] == A[1]) {
+			return A[0];
+		}
+		else {
+			return -1;
+		}
+	}
+	else if (N == 1) {
+		return A[0];
+	}
+	if (!IsEven(N)) {
+		int result = GetMainElement(A, N - 1);
+		if (result != -1) {
+			return result;
+		}
+		else {
+			int time = 0;
+			for (int index = 0; index < N; index++) {
+				if (A[index] == A[N - 1]) {
+					time += 1;
+				}
+			}
+			if (time > N / 2) {
+				return A[N - 1];
+			}
+			else {
+				return -1;
+			}
+		}
+	}
+	int *B = (int*)malloc(N * sizeof(int));
+	int indexB = 0;
+	for (int indexA = 0; indexA+1 < N; indexA += 2) {
+		if (A[indexA] == A[indexA+1]) {
+			B[indexB] = A[indexA];
+			indexB++;
+		}
+	}
+	printf("B: ");
+	PrintArr(B, indexB);
+	int result=GetMainElement(B, indexB);
+	free(B);
+	return result;
+}
 
 
-int GetMainElement(int A[], int length) {
+int GetMainElement2(int A[], int length) {
 	//copy the array
 	int max = A[0];
 	for (int indexA = 0; indexA < length; indexA++) {
@@ -110,7 +158,7 @@ int GetMainElement(int A[], int length) {
 	for (int index = 0; index < length; index++) {
 		tmp[index] = A[index];
 	}
-	BucketSort(tmp, length, max);
+	BucketSort(tmp, length, max+10);
 	//get the element which  has the only posibility to be
 	int half = (int)ceil(length*1.0 / 2);
 	for (int index = 0; index < half; index++) {
