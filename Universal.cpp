@@ -97,8 +97,6 @@ void RadixSort(int arr[], int N, int range){
 }
 
 int GetMainElement(int A[], int N) {
-	printf("A:");
-	PrintArr(A, N);
 	if (N == 2) {
 		if (A[0] == A[1]) {
 			return A[0];
@@ -138,8 +136,6 @@ int GetMainElement(int A[], int N) {
 			indexB++;
 		}
 	}
-	printf("B: ");
-	PrintArr(B, indexB);
 	int result=GetMainElement(B, indexB);
 	free(B);
 	return result;

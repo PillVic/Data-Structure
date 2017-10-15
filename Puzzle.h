@@ -35,7 +35,7 @@ void ListReverse3(List *L);
 
 void ListDeleteCommon(List L);
 
-void CheckBalanceSign(char signs[],int N);
+bool CheckBalanceSign(char signs[],int N);
 void BackCal(char* expression[], int length);
 
 int CalTreeNode(SearchTree T);
