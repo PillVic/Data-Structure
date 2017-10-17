@@ -11,12 +11,7 @@ using namespace std;
 
 
 int main() {
-	char sign[6] = "'(])'";
-	if (CheckBalanceSign(sign, 6)) {
-		cout << "True" << endl;
-	}
-	else {
-		cout << "False" << endl;
-	}
+	char expressions[11] = { '6','5','2','3','+','8','*','+','3','+','*' };
+	cout << PostfixExpressions(expressions, 11 - 1) << endl;
 	return 0;
 }
