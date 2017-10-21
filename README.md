@@ -1,7 +1,7 @@
 # Data-Structure
 
 用C语言完成C语言描述的数据结构课本上的部分习题
-
+* * *
 TextPuzzle.h
 --------
 把基本上所有的题目都以函数形式声明在该头文件TextPuzzle.h中
