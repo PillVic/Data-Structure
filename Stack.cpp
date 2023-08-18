@@ -1,5 +1,5 @@
 #include"Stack.h"
-#include"UniverSal.h"
+#include"Universal.h"
 
 struct Node {
 	ElementType Element;

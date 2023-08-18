@@ -1,8 +1,8 @@
 #include"List.h"
 #include"Puzzle.h"
-#include"UniverSal.h"
+#include"Universal.h"
 
-/*Ï°Ìâ£¬´òÓ¡Á´±íÔªËØ*/
+/*ä¹ é¢˜ï¼Œæ‰“å°é“¾è¡¨å…ƒç´ */
 void PrintList(List Head) {
 	Position P = First(Head);
 	while (P != NULL) {
@@ -10,7 +10,7 @@ void PrintList(List Head) {
 		P = Advance(P);
 	}
 }
-/*Êä³öÖ¸¶¨Î»ÖÃµÄÔªËØ*/
+/*è¾“å‡ºæŒ‡å®šä½ç½®çš„å…ƒç´ */
 void PrintLots(List L, List P) {
 	int Counter;
 	Position Lpos, Ppos;
@@ -18,7 +18,7 @@ void PrintLots(List L, List P) {
 	Ppos = First(P);
 	Counter = 1;
 	while (Lpos != NULL && Ppos != NULL) {
-		if (Ppos->Element == Counter++) {     //Counter´ú±íÁ´±íPÖÐµÄÔªËØÎ»ÖÃ
+		if (Ppos->Element == Counter++) {     //Counterä»£è¡¨é“¾è¡¨Pä¸­çš„å…ƒç´ ä½ç½®
 			printf("%d ", Lpos->Element);
 			Ppos = Advance(Ppos);
 		}
@@ -27,7 +27,7 @@ void PrintLots(List L, List P) {
 }
 
 void SwapNode(Position BeforeP, List L) {
-	/*Ö»ÓÐ°Ñº¯ÊýÌåÄÚÄÚÈÝ·Åµ½Ö÷º¯ÊýÄÚ²ÅÓÐ×÷ÓÃ*/
+	/*åªæœ‰æŠŠå‡½æ•°ä½“å†…å†…å®¹æ”¾åˆ°ä¸»å‡½æ•°å†…æ‰æœ‰ä½œç”¨*/
 	Position P, AfterP;
 
 	P = BeforeP->Next;

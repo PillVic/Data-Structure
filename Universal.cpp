@@ -1,4 +1,4 @@
-#include"UniverSal.h"
+#include"Universal.h"
 #include<stdlib.h>
 #include<time.h>
 #include<math.h>
@@ -18,7 +18,7 @@ void PrintArr(int arr[], int length) {
 	printf("\n");
 }
 
-//Ëæ»úÊıÉú³ÉÆ÷£¬Éú³ÉÒ»¸öiºÍjÖ®¼äµÄÒ»¸öÕûÊı
+//éšæœºæ•°ç”Ÿæˆå™¨ï¼Œç”Ÿæˆä¸€ä¸ªiå’Œjä¹‹é—´çš„ä¸€ä¸ªæ•´æ•°
 int RandInt(int i, int j) {
 	if (i == j) {
 		return i;
@@ -39,7 +39,7 @@ int GetNumber(int Number, int N) {
 }
 
 void BucketSort(int A[], int N, int range) {
-	//ÊµÏÖÍ°Ê½ÅÅĞò
+	//å®ç°æ¡¶å¼æ’åº
 	int *Table = (int*)malloc(range * sizeof(int));
 	for (int index = 0; index < range; index++) {
 		Table[index] = 0;

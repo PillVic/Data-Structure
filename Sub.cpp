@@ -1,6 +1,6 @@
 #include"Puzzle.h"
 
-//Ä£·Â×î´óĞòÁĞºÍµÄËã·¨4
+//æ¨¡ä»¿æœ€å¤§åºåˆ—å’Œçš„ç®—æ³•4
 int MinSubSum(int arr[], int N) {
 	int MinSum = arr[0];
 	int ThisSum = 0;

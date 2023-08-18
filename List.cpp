@@ -1,6 +1,6 @@
 #include"List.h"
 #include"Puzzle.h"
-#include"UniverSal.h"
+#include"Universal.h"
 
 
 /*defined operator*/
@@ -11,7 +11,7 @@ static Position Min(Position P, Position L) {
 	return Retrieve(P) < Retrieve(L) ? P : L;
 }
 
-/*¸ø¶¨Ö¸Õë£¬³õÊ¼»¯Á´±í*/
+/*ç»™å®šæŒ‡é’ˆï¼Œåˆå§‹åŒ–é“¾è¡¨*/
 List MakeEmpty(List L) {
 	L = (Node*)malloc(sizeof(Node));
 	if (NULL == L) {
@@ -59,7 +59,7 @@ Position FindPrevious(ElementType X, List L) {
 	return P;
 }
 
-/*²åÈëÖ¸¶¨ÔªËØµ½Ö¸¶¨Î»ÖÃºóÃæ*/
+/*æ’å…¥æŒ‡å®šå…ƒç´ åˆ°æŒ‡å®šä½ç½®åŽé¢*/
 void Insert(ElementType X, List L, Position P) {
 	Position TmpCell = (Node*)malloc(sizeof(Node));
 	if (TmpCell == NULL) {

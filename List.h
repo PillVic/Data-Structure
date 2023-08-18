@@ -1,5 +1,5 @@
 #pragma once
-#include"UniverSal.h"
+#include"Universal.h"
 #define ElementType int
 
 typedef  struct Node  *PtrToNode;

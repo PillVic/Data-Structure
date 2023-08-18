@@ -1,7 +1,7 @@
 #include"Puzzle.h"
-#include"UniverSal.h"
+#include"Universal.h"
 
-//Ã°Åİ·¨ÅÅĞòºó·µ»Ø
+//å†’æ³¡æ³•æ’åºåè¿”å›
 int Choice1(int arr[], int k, int N) {
 	for (int i = 0; i < N; i++) {
 		for (int j = i; j < N; j++) {
@@ -13,7 +13,7 @@ int Choice1(int arr[], int k, int N) {
 	return arr[k];
 }
 
-//Ñ¡ÔñÅÅĞò²¿·Öºó·µ»Ø(ÕÒÑ°k´ÎÊ£ÓàÔªËØÖĞµÄ×î´óÖµ)
+//é€‰æ‹©æ’åºéƒ¨åˆ†åè¿”å›(æ‰¾å¯»kæ¬¡å‰©ä½™å…ƒç´ ä¸­çš„æœ€å¤§å€¼)
 int Choice2(int arr[], int k, int N) {
 	for (int i = 0; i <= k; i++) {
 		for (int j = i; j < N; j++) {

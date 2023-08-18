@@ -1,4 +1,4 @@
-#include"UniverSal.h"
+#include"Universal.h"
 #include"Puzzle.h"
 #include<stdlib.h>
 #include<stdio.h>
@@ -43,7 +43,7 @@ void RandomSwap3(int N, int arr[]) {
 	}
 }
 
-//Ëã·¨2µÄÓÅ»¯£¬Í¨¹ıË³ĞòÌîÈëÔªËØ£¬»Ø±ÜUsedÊı×éµÄÊ¹ÓÃ
+//ç®—æ³•2çš„ä¼˜åŒ–ï¼Œé€šè¿‡é¡ºåºå¡«å…¥å…ƒç´ ï¼Œå›é¿Usedæ•°ç»„çš„ä½¿ç”¨
 void RandomSwap4(int N, int arr[]) {
 	for (int i = 0; i < N; i++) {
 		arr[i] = 0;
